@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<project name="Highlighter" default="compile" basedir=".">
+
+     <!-- Abbreviate these so they can be changed easier -->
+     <property name="src_dir" value="src"/>
+     <property name="build_dir" value="bin"/>
+
+
+     <!-- Start building by making the bin directory -->
+     <target name="init">
+          <mkdir dir="${build_dir}"/>
+     </target>
+
+
+     <!-- The compile target, which is default. Build all the files in src/
+          to bin/ -->
+     <target name="compile" depends="init">
+          <javac srcdir="${src_dir}" destdir="${build_dir}"/>
+     </target>
+
+
+     <!-- Clean -->
+     <target name="clean" >
+         <delete dir="${build_dir}" />
+     </target>
+
+
+     <!-- Run -->
+     <target name="run" depends="compile" >
+			 <java classname="herrick.test.Highlighter" >
+				 <classpath>
+					 <pathelement path="${build_dir}" />
+				 </classpath>
+			 </java>
+     </target>
+
+     <!-- Tests -->
+     <target name="test" depends="compile">
+			 <junit printsummary="yes" fork="yes" haltonfailure="yes">
+				 <classpath>
+					 <pathelement path="${build_dir}" />
+				 </classpath>
+				 <formatter type="plain"/>
+				 <test name="herrick.test.Tests"/>
+			 </junit>
+     </target>
+
+
+</project>
+
