@@ -1,11 +1,12 @@
-##### USAGE ####
-tar contents: src/Highlighter.java, src/Tests.java, build.xml
+# Highlighter #
+
+Originally a code test for a job interview. Given two arguments, a document and a query, the program returns a snippet from the document that's most relative to the given query, with both 'relevant' and 'snippet' being subjective and purposely vague in the original project description.
 
 package: herrick.test
 
--untar wherever.
--see Highlighter.java for notes/rants.
+See Highlighter.java or below for notes/rants.
 
+## Usage ##
 BUILD OPTIONS:
 ant: 
 		 compile - compiles!
@@ -15,7 +16,7 @@ ant:
 		 clean - removes everything in bin/ and the dir itself
 
 
-####  NOTES  ####		 
+###  NOTES  ###		 
 
  CODE TEST, SUMMER 2010 BY RYLAND HERRICK
 
