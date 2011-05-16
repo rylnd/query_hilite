@@ -43,31 +43,31 @@ logic/weighting	is best explained by example:
 
 doc = "toast toaster toad"
 
-__CASE 1__: query = "toast"     
+__CASE 1__:  query = "toast"
 _Weights after search_:
- toast: 1    
- toaster: 1                      
- toad: 0
+toast: 1
+toaster: 1
+toad: 0
 
-__CASE 2__: query = "toaster"  
- toast: 0                          
- toaster: 1 
- toad: 0
+__CASE 2__:  query = "toaster"
+toast: 0
+toaster: 1
+toad: 0
 
-__CASE 3__: query = "toast toaster"
- toast: 2
- toaster: 2
- toad: 0
+__CASE 3__:  query = "toast toaster"
+toast: 2
+toaster: 2
+toad: 0
 
-__CASE 4__: query = "\"toast toaster\""
- toast: 2
- toaster: 2 
- toad: 0
+__CASE 4__:  query = "\"toast toaster\""
+toast: 2
+toaster: 2
+toad: 0
 
-__CASE 5__: query = "\"toaster toast\""
- toast: 1
- toaster: 2
- toad: 0
+__CASE 5__:  query = "\"toaster toast\""
+toast: 1
+toaster: 2
+toad: 0
  
 Cases 3 and 4 produce the same weights because the algorithm
 will first attempt to match a non-phrase search as a phrase 
@@ -152,6 +152,8 @@ highlighted word will be included in the tag.
 ## Dependencies 
 - JUnit for Unit testing
 - Ant (if you want to use my build file)
+
+
 
 
 Thanks for reading all that.  You did read it, right?
