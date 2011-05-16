@@ -7,25 +7,32 @@ package: herrick.test
 See Highlighter.java or below for notes/rants.
 
 ## Usage ##
-BUILD OPTIONS:
-ant: 
-		 compile - compiles!
-		 run - runs whatever's in Highlighter's main()
-		 test - runs through tests in Tests (uses JUnit)
-		      - output (upon failure) will be in .txt in base dir
-		 clean - removes everything in bin/ and the dir itself
+
+### BUILD OPTIONS:
+
+Run these from the root project directory (containing build.xml):
+
+	  `ant compile` - compiles!
+
+	  `ant run` - runs whatever's in Highlighter's main()
+
+	  `ant test` - runs through tests in Tests (uses JUnit)
+
+	  		     - output (upon failure) will be in .txt in base dir
+
+	  `ant clean` - removes everything in bin/ and the dir itself
 
 
-###  NOTES  
 
-CODE TEST, SUMMER 2010 BY RYLAND HERRICK
+## Notes
 
-### SEARCH ASSUMPTIONS:
--using ASCII alphabet 
--ignoring:
+### SEARCH ASSUMPTIONS
+
+- using ASCII alphabet 
+- ignoring:
   - punctuation
-	- capitalization
-	- excess whitespace (including the returned snippet)
+  - capitalization
+  - excess whitespace (including the returned snippet)
 
 
 ### OVERVIEW
@@ -130,6 +137,8 @@ CASE 5: query = "\"toaster toast\""
 			instance structures used here and save on both 
 			space and time.
 
+## Dependencies 
 
-		Thanks for reading all that.  You did read it, right?
+
+Thanks for reading all that.  You did read it, right?
 
