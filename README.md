@@ -19,15 +19,12 @@ Run these from the root project directory (containing build.xml):
 
 	$ ant clean    # removes everything in bin/ and the dir itself
 
+
 ## Notes
 
 ### Assumptions
-
 - using ASCII alphabet 
-- ignoring:
-  - punctuation
-  - capitalization
-  - excess whitespace (including the returned snippet)
+- ignores punctuation, capitalization, excess whitespace
 
 ***
 ### OVERVIEW
@@ -90,12 +87,6 @@ words rather than characters, punctuation adjacent to a
 highlighted word will be included in the tag.
  
 
-### ARBITRARY CHOICES
-- returns first snippet in doc if there's no match or no query
-- returns HIGHLIGHTED first snippet if doc==query
-- returns null if doc is an empty string or null
-
-
 ####   WHAT IT DOES DO:
 #####	 SEARCHING:
 - Always tries to find exactly what you typed first 
@@ -154,4 +145,5 @@ highlighted word will be included in the tag.
 
 
 Thanks for reading all that.  You did read it, right?
+
 
