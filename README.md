@@ -6,9 +6,7 @@ package: herrick.test
 
 See Highlighter.java or below for notes/rants.
 
-## Usage ##
-
-### BUILD OPTIONS:
+## Build Options:
 
 Run these from the root project directory (containing build.xml):
 
@@ -43,31 +41,31 @@ logic/weighting	is best explained by example:
 
 doc = "toast toaster toad"
 
-__CASE 1__:  query = "toast"
-_Weights after search_:
-toast: 1
-toaster: 1
-toad: 0
+__CASE 1__:  query = "toast"  
+_Weights after search_:  
+toast: 1  
+toaster: 1  
+toad: 0  
 
-__CASE 2__:  query = "toaster"
-toast: 0
-toaster: 1
-toad: 0
+__CASE 2__:  query = "toaster"  
+toast: 0  
+toaster: 1  
+toad: 0  
 
-__CASE 3__:  query = "toast toaster"
-toast: 2
-toaster: 2
-toad: 0
+__CASE 3__:  query = "toast toaster"  
+toast: 2  
+toaster: 2  
+toad: 0  
 
-__CASE 4__:  query = "\"toast toaster\""
-toast: 2
-toaster: 2
-toad: 0
+__CASE 4__:  query = "\"toast toaster\""  
+toast: 2  
+toaster: 2  
+toad: 0  
 
-__CASE 5__:  query = "\"toaster toast\""
-toast: 1
-toaster: 2
-toad: 0
+__CASE 5__:  query = "\"toaster toast\""  
+toast: 1  
+toaster: 2  
+toad: 0  
  
 Cases 3 and 4 produce the same weights because the algorithm
 will first attempt to match a non-phrase search as a phrase 
@@ -98,7 +96,6 @@ highlighted word will be included in the tag.
 - returns null if doc is an empty string or null
 
 
-### SUMMARY:
 ####   WHAT IT DOES DO:
 #####	 SEARCHING:
 - Always tries to find exactly what you typed first 
